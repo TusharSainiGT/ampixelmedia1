@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Brand Identity & Design — Ampixel Media</title>
+  <meta name="description" content="Make your business unforgettable with custom logo design, premium brand books, typography systems, and packaging design by Ampixel Media.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Subpage specific styles */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      transition: var(--transition);
+    }
+    .back-btn:hover {
+      color: var(--secondary);
+      transform: translateX(-4px);
+    }
+    .service-detail-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      margin-top: 60px;
+    }
+    .service-features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .feature-item-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: var(--transition);
+    }
+    .feature-item-box:hover {
+      border-color: rgba(99, 102, 241, 0.3);
+      transform: translateY(-2px);
+    }
+    .feature-item-box h4 {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: white;
+    }
+    .feature-item-box p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .tech-stack-wrap {
+      margin-top: 32px;
+    }
+    .tech-stack-title {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .tech-badge-container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .tech-badge {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    @media (max-width: 992px) {
+      .service-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="loader-a">A</span><span class="loader-m">mpixel</span>
+      </div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Loading Details...</p>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="2" y="14" width="6" height="6" rx="1" fill="url(#lg1)"/>
+            <rect x="10" y="8" width="6" height="12" rx="1" fill="url(#lg1)"/>
+            <rect x="18" y="2" width="6" height="18" rx="1" fill="url(#lg1)"/>
+            <rect x="26" y="14" width="4" height="6" rx="1" fill="url(#lg1)" opacity="0.5"/>
+            <defs>
+              <linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366F1"/>
+                <stop offset="1" stop-color="#06B6D4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">Ampixel<span class="logo-accent"> Media</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#work" class="nav-link">Work</a>
+        <a href="index.html#process" class="nav-link">Process</a>
+        <a href="index.html#team" class="nav-link">Team</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+      </div>
+      <a href="https://wa.me/917355801141?text=Hi%20Ampixel%20Media!%20I%27d%20like%20to%20book%20a%20free%20strategy%20call%20for%20Brand%20Identity." target="_blank" class="nav-cta">
+        Book a Call
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home" style="min-height: 80vh;">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <div class="hero-container">
+      <a href="index.html#services" class="back-btn reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Services
+      </a>
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Logo Design, Visual Identity Systems & Brand Manuals
+      </div>
+      <h1 class="hero-title reveal reveal-delay-1">
+        Brand & <span class="gradient-text">Identity</span><br>
+        <span class="gradient-text-cyan">Design.</span>
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        We build iconic visual frameworks, detailed corporate color guidelines, typography structures, and packaging designs that elevate your brand value index.
+      </p>
+
+      <div class="hero-stats reveal reveal-delay-3" style="max-width: 680px;">
+        <div class="stat-card">
+          <div class="stat-num" data-count="100" data-suffix="+ Built">0+ Built</div>
+          <div class="stat-label">Custom Identities</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="3" data-suffix="x Value">0x Value</div>
+          <div class="stat-label">Brand Equity Factor</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="100" data-suffix="% Custom">0% Custom</div>
+          <div class="stat-label">Visual Systems</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE DETAILS SECTION -->
+  <section class="services-section" style="background: var(--bg);">
+    <div class="section-container" style="padding-top: 40px;">
+      <div class="service-detail-grid">
+        <div class="reveal">
+          <div class="section-header" style="text-align: left; margin-bottom: 32px; max-width: 100%;">
+            <span class="section-tag" style="margin-left: 0;">Capabilities</span>
+            <h2 class="section-title" style="text-align: left;">Iconic Visual Systems</h2>
+            <p class="section-sub" style="text-align: left;">A premium brand identity separates market leaders from copycats. We construct clean, memorable logo marks and systems that fit your core positioning.</p>
+          </div>
+          
+          <div class="service-features-list">
+            <div class="feature-item-box">
+              <h4>Logo Design & Typography Silos</h4>
+              <p>Crafting custom vector logo structures, typography schemes, hierarchy setups, and spacing requirements to protect the integrity of your logo mark on any print or screen medium.</p>
+            </div>
+            <div class="feature-item-box">
+              <h4>Brand Guidelines & Brand Books</h4>
+              <p>Detailed design specifications detailing exact primary and secondary color hex codes, font rules, print instructions, and rules on clear padding areas.</p>
+            </div>
+            <div class="feature-item-box">
+              <h4>Packaging & Digital Asset Layouts</h4>
+              <p>Design packaging boxes, custom bags, merchandise, business cards, email signatures, presentation decks, and social media layout templates to create a unified customer journey.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="section-header" style="text-align: left; margin-bottom: 32px; max-width: 100%;">
+            <span class="section-tag" style="margin-left: 0;">Design Systems</span>
+            <h2 class="section-title" style="text-align: left;">Creative Tool Suite</h2>
+          </div>
+
+          <div class="feature-item-box" style="margin-bottom: 32px;">
+            <h4 style="color: var(--secondary);">Unified Brand Experience</h4>
+            <p>We combine strategic target demographic research with high-end graphic execution to make sure your brand appeals to the correct luxury, tech, or lifestyle buyers.</p>
+          </div>
+
+          <div class="tech-stack-wrap">
+            <div class="tech-stack-title">Software We Command</div>
+            <div class="tech-badge-container">
+              <span class="tech-badge">Adobe Illustrator</span>
+              <span class="tech-badge">Figma Pro</span>
+              <span class="tech-badge">Adobe Photoshop</span>
+              <span class="tech-badge">Blender (3D Mockups)</span>
+              <span class="tech-badge">Adobe Dimension</span>
+              <span class="tech-badge">Adobe InDesign</span>
+              <span class="tech-badge">FontForge</span>
+              <span class="tech-badge">Pantone Matching System</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section class="process-section" id="process">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">How We Work</span>
+        <h2 class="section-title">The Design Roadmap</h2>
+        <p class="section-sub">Our 5-step creative design workflow to shape your brand's visual legacy.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step reveal">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <div class="step-icon">💡</div>
+            <h3>Discovery & Moodboards</h3>
+            <p>Deep-diving into your target audience, selecting color theories, and presenting style moodboards to align creative direction.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <div class="step-icon">🖋️</div>
+            <h3>Concept Development</h3>
+            <p>Drafting initial vector concepts, experimenting with symbol layouts, and iterating design adjustments.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <div class="step-icon">🔤</div>
+            <h3>Typography Selection</h3>
+            <p>Selecting secondary and header typefaces, establishing typographic scales, and testing readability indexes.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <div class="step-icon">📖</div>
+            <h3>Brand Manual Creation</h3>
+            <p>Assembling the official brand guide, complete with rules on logo spacing, brand patterns, and mockups.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <div class="step-icon">📦</div>
+            <h3>Asset Package Delivery</h3>
+            <p>Delivering high-resolution master file formats (SVG, EPS, PDF, AI, PNG) alongside active font licenses.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section" id="faq">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Brand Identity FAQ</h2>
+        <p class="section-sub">Quick answers to typical queries about visual assets and vector source packages.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>Do we get full copyrights and source files?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. Upon final payment, 100% intellectual copyrights and vector master files (Adobe Illustrator .AI format, EPS, SVG, print-ready PDF, high-res PNGs) are fully transferred to you.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>What is a brand identity book and why is it important?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>A brand book is a style manual that outlines exactly how your design assets should look. It prevents partners, developers, and internal designers from stretching logos, using incorrect colors, or using mismatching typefaces in marketing materials.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>Can you update an existing logo?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. We offer brand refreshing services where we modernize existing logo marks, update typography choices, and refine older color schemes while retaining the legacy recognition your brand has built.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="final-cta" id="contact">
+    <div class="cta-blob cta-blob-1"></div>
+    <div class="cta-blob cta-blob-2"></div>
+    <div class="section-container">
+      <div class="cta-content reveal">
+        <div class="cta-badge">🎨 Build Your Legacy</div>
+        <h2 class="cta-title">Stand Out From The Noise.<br><span class="gradient-text">Establish Iconic Brand Value.</span></h2>
+        <p class="cta-sub">Claim a free visual review and positioning consultation to evaluate your current visual identity compared to your top competitors.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/917355801141?text=Hi%20Ampixel%20Media!%20I%27d%20like%20to%20discuss%20a%20Brand%20Identity%20and%20Design%20project." target="_blank" class="btn-primary-glow btn-xl">
+            <span>Discuss Visual Brand Assets</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-bottom">
+        <p>© 2025 Ampixel Media. All rights reserved. Premium digital growth.</p>
+        <div class="footer-bottom-links">
+          <a href="index.html">Back to Home Page</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

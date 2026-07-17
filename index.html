@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ampixel Media — Premium Digital Growth Agency</title>
+  <meta name="description" content="Ampixel Media is a premium Digital Growth Agency helping startups, personal brands, D2C brands, SaaS companies, and local businesses scale through performance marketing, AI automation, and modern web development.">
+  <meta name="keywords" content="digital marketing agency, performance marketing, AI automation, web development, SEO, social media marketing, brand identity, influencer marketing">
+  <meta property="og:title" content="Ampixel Media — Premium Digital Growth Agency">
+  <meta property="og:description" content="We combine Digital Marketing, Influencer Campaigns, AI Automation and High-Converting Websites to turn ambitious businesses into industry leaders.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#050505">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="loader-a">A</span><span class="loader-m">mpixel</span>
+      </div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Loading Experience...</p>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="2" y="14" width="6" height="6" rx="1" fill="url(#lg1)"/>
+            <rect x="10" y="8" width="6" height="12" rx="1" fill="url(#lg1)"/>
+            <rect x="18" y="2" width="6" height="18" rx="1" fill="url(#lg1)"/>
+            <rect x="26" y="14" width="4" height="6" rx="1" fill="url(#lg1)" opacity="0.5"/>
+            <defs>
+              <linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366F1"/>
+                <stop offset="1" stop-color="#06B6D4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">Ampixel<span class="logo-accent"> Media</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </div>
+      <a href="https://wa.me/917355801141?text=Hi%20Ampixel%20Media!%20I%27d%20like%20to%20book%20a%20free%20strategy%20call." target="_blank" class="nav-cta">
+        Book a Call
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#work" class="mobile-link">Work</a>
+      <a href="#process" class="mobile-link">Process</a>
+      <a href="#team" class="mobile-link">Team</a>
+      <a href="#faq" class="mobile-link">FAQ</a>
+      <a href="https://wa.me/917355801141?text=Hi%20Ampixel%20Media!%20I%27d%20like%20to%20book%20a%20free%20strategy%20call." target="_blank" class="mobile-cta">Book Free Strategy Call →</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <div class="hero-container">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Premium Digital Growth Agency
+      </div>
+      <h1 class="hero-title reveal reveal-delay-1">
+        Scaling Brands That<br>
+        <span class="gradient-text">Refuse To Stay</span><br>
+        <span class="gradient-text-cyan">Ordinary.</span>
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        We combine Digital Marketing, Influencer Campaigns, AI Automation<br>
+        and High-Converting Websites to turn ambitious businesses into industry leaders.
+      </p>
+      <div class="hero-ctas reveal reveal-delay-3">
+        <a href="https://wa.me/917355801141?text=Hi%20Ampixel%20Media!%20I%27d%20like%20to%20book%20a%20free%20strategy%20call." target="_blank" class="btn-primary-glow">
+          <span>Book Free Strategy Call</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+        <a href="#work" class="btn-outline-glow">
+          <span>View Our Work</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M10 8l4 4-4 4"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-stats reveal reveal-delay-4">
+        <div class="stat-card">
+          <div class="stat-num" data-count="250" data-suffix="+">0+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="80" data-suffix="+">0+</div>
+          <div class="stat-label">Brands</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="15" data-suffix="M+">0M+</div>
+          <div class="stat-label">People Reached</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="98" data-suffix="%">0%</div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- TRUSTED BY SECTION -->
+  <section class="trusted-by" id="trusted">
+    <div class="section-container">
+      <p class="trusted-label reveal">Trusted by ambitious brands across industries</p>
+      <div class="marquee-wrapper">
+        <div class="marquee-track" id="marqueeTrack">
+          <div class="marquee-item"><span class="industry-icon">🚀</span> Startups</div>
+          <div class="marquee-item"><span class="industry-icon">✨</span> Creators</div>
+          <div class="marquee-item"><span class="industry-icon">📦</span> D2C Brands</div>
+          <div class="marquee-item"><span class="industry-icon">🏠</span> Real Estate</div>
+          <div class="marquee-item"><span class="industry-icon">💊</span> Healthcare</div>
+          <div class="marquee-item"><span class="industry-icon">💰</span> Finance</div>
+          <div class="marquee-item"><span class="industry-icon">🎓</span> Education</div>
+          <div class="marquee-item"><span class="industry-icon">🛒</span> E-Commerce</div>
+          <div class="marquee-item"><span class="industry-icon">💼</span> SaaS</div>
+          <div class="marquee-item"><span class="industry-icon">🎨</span> Personal Brands</div>
+          <!-- Duplicate for seamless loop -->
+          <div class="marquee-item"><span class="industry-icon">🚀</span> Startups</div>
+          <div class="marquee-item"><span class="industry-icon">✨</span> Creators</div>
+          <div class="marquee-item"><span class="industry-icon">📦</span> D2C Brands</div>
+          <div class="marquee-item"><span class="industry-icon">🏠</span> Real Estate</div>
+          <div class="marquee-item"><span class="industry-icon">💊</span> Healthcare</div>
+          <div class="marquee-item"><span class="industry-icon">💰</span> Finance</div>
+          <div class="marquee-item"><span class="industry-icon">🎓</span> Education</div>
+          <div class="marquee-item"><span class="industry-icon">🛒</span> E-Commerce</div>
+          <div class="marquee-item"><span class="industry-icon">💼</span> SaaS</div>
+          <div class="marquee-item"><span class="industry-icon">🎨</span> Personal Brands</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services-section" id="services">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">What We Do</span>
+        <h2 class="section-title">Services Built to <span class="gradient-text">Scale You</span></h2>
+        <p class="section-sub">End-to-end growth solutions crafted for ambitious brands that demand results.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Digital Marketing -->
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon-wrap" style="--icon-color: #6366F1">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 class="service-title">Digital Marketing</h3>
+          <p class="service-desc">Full-funnel strategies that attract, convert, and retain your ideal customers at scale.</p>
+          <div class="service-tags">
+            <span>Meta Ads</span><span>Google Ads</span><span>Email</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- SEO -->
+        <div class="service-card reveal" data-delay="1">
+          <div class="service-icon-wrap" style="--icon-color: #06B6D4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <h3 class="service-title">SEO & Content</h3>
+          <p class="service-desc">Rank higher, get found faster. Technical SEO + content strategy that drives organic growth.</p>
+          <div class="service-tags">
+            <span>On-Page</span><span>Technical</span><span>Link Building</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- Performance Marketing -->
+        <div class="service-card reveal" data-delay="2">
+          <div class="service-icon-wrap" style="--icon-color: #A855F7">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <h3 class="service-title">Performance Marketing</h3>
+          <p class="service-desc">ROI-first paid campaigns on Meta, Google, and LinkedIn with data-backed creative testing.</p>
+          <div class="service-tags">
+            <span>ROAS</span><span>CRO</span><span>A/B Testing</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="service-card reveal" data-delay="3">
+          <div class="service-icon-wrap" style="--icon-color: #EC4899">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="service-title">Social Media Management</h3>
+          <p class="service-desc">Consistent, engaging content that builds community and converts followers into customers.</p>
+          <div class="service-tags">
+            <span>Instagram</span><span>LinkedIn</span><span>YouTube</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- Influencer -->
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon-wrap" style="--icon-color: #F59E0B">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="service-title">Influencer Marketing</h3>
+          <p class="service-desc">Authentic partnerships with creators that amplify your brand to the right audiences.</p>
+          <div class="service-tags">
+            <span>UGC</span><span>Nano</span><span>Macro</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- Web Dev -->
+        <div class="service-card reveal" data-delay="1">
+          <div class="service-icon-wrap" style="--icon-color: #10B981">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="service-title">Website Development</h3>
+          <p class="service-desc">Lightning-fast, conversion-optimized websites and landing pages that impress and perform.</p>
+          <div class="service-tags">
+            <span>React</span><span>Next.js</span><span>WordPress</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- Ecommerce -->
+        <div class="service-card reveal" data-delay="2">
+          <div class="service-icon-wrap" style="--icon-color: #EF4444">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </div>
+          <h3 class="service-title">E-commerce Development</h3>
+          <p class="service-desc">Shopify and WooCommerce stores engineered to maximize every visitor's purchase potential.</p>
+          <div class="service-tags">
+            <span>Shopify</span><span>WooCommerce</span><span>D2C</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- Mobile Apps -->
+        <div class="service-card reveal" data-delay="3">
+          <div class="service-icon-wrap" style="--icon-color: #6366F1">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3 class="service-title">Mobile Apps</h3>
+          <p class="service-desc">Cross-platform mobile apps that deliver exceptional UX and drive user engagement.</p>
+          <div class="service-tags">
+            <span>React Native</span><span>Flutter</span><span>iOS/Android</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- Brand Identity -->
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon-wrap" style="--icon-color: #06B6D4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+          </div>
+          <h3 class="service-title">Brand Identity</h3>
+          <p class="service-desc">Visual identities that communicate your brand's essence and make you unforgettable.</p>
+          <div class="service-tags">
+            <span>Logo</span><span>Guidelines</span><span>Strategy</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- Video Editing -->
+        <div class="service-card reveal" data-delay="1">
+          <div class="service-icon-wrap" style="--icon-color: #A855F7">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+          <h3 class="service-title">Video Editing</h3>
+          <p class="service-desc">Cinematic edits, Reels, YouTube content, and ads that stop the scroll and drive action.</p>
+          <div class="service-tags">
+            <span>Reels</span><span>YouTube</span><span>Ads</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- AI Automation -->
+        <div class="service-card reveal service-card-featured" data-delay="2">
+          <div class="service-icon-wrap" style="--icon-color: #06B6D4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/><path d="M12 7v4m-2-2h4"/></svg>
+          </div>
+          <span class="service-badge">HOT</span>
+          <h3 class="service-title">AI Automation</h3>
+          <p class="service-desc">Automate your marketing, sales, and operations with cutting-edge AI tools and workflows.</p>
+          <div class="service-tags">
+            <span>Chatbots</span><span>Workflows</span><span>AI Tools</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- Lead Generation -->
+        <div class="service-card reveal" data-delay="3">
+          <div class="service-icon-wrap" style="--icon-color: #EC4899">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="service-title">Lead Generation</h3>
+          <p class="service-desc">Targeted campaigns and funnels that consistently deliver high-quality leads ready to convert.</p>
+          <div class="service-tags">
+            <span>B2B</span><span>B2C</span><span>Qualified Leads</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- CRM Automation -->
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon-wrap" style="--icon-color: #10B981">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="service-title">CRM Automation</h3>
+          <p class="service-desc">Smart CRM setups with automated follow-ups, pipelines, and nurture sequences that close deals.</p>
+          <div class="service-tags">
+            <span>HubSpot</span><span>Zoho</span><span>Automation</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <!-- Marketing Funnels -->
+        <div class="service-card reveal" data-delay="1">
+          <div class="service-icon-wrap" style="--icon-color: #F59E0B">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+          </div>
+          <h3 class="service-title">Marketing Funnels</h3>
+          <p class="service-desc">End-to-end funnel architecture — from awareness to retention — built to maximize LTV.</p>
+          <div class="service-tags">
+            <span>Lead Magnet</span><span>Nurture</span><span>Conversion</span>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us" id="why">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">Why Ampixel</span>
+        <h2 class="section-title">The Ampixel <span class="gradient-text">Advantage</span></h2>
+        <p class="section-sub">What makes us the agency that ambitious brands choose when they're serious about growth.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-icon">📊</div>
+          <h3>Data-Driven Decisions</h3>
+          <p>Every strategy is backed by analytics, A/B testing, and real-time performance data — no guesswork.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">🎨</div>
+          <h3>Creative Excellence</h3>
+          <p>Award-worthy design and content that doesn't just look good — it converts and builds brand equity.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">⚡</div>
+          <h3>Fast Delivery</h3>
+          <p>Agile execution with clear timelines. We move fast without sacrificing quality or attention to detail.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">🔍</div>
+          <h3>Transparent Reporting</h3>
+          <p>Clear dashboards and weekly reports so you always know exactly where your budget is going.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">💎</div>
+          <h3>ROI Focus</h3>
+          <p>We obsess over your return. Every rupee/dollar spent is tracked, optimized, and justified.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">🤝</div>
+          <h3>Dedicated Team</h3>
+          <p>A dedicated team assigned to your brand — not a ticket number passed between freelancers.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">🌱</div>
+          <h3>Long-Term Partnerships</h3>
+          <p>We think in terms of years, not campaigns. Our goal is to become an extension of your team.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">🤖</div>
+          <h3>AI-Powered Edge</h3>
+          <p>We leverage cutting-edge AI tools to give your brand a competitive advantage competitors can't match.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section class="process-section" id="process">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">How We Work</span>
+        <h2 class="section-title">Our <span class="gradient-text">Proven Process</span></h2>
+        <p class="section-sub">A battle-tested 5-step framework that takes your brand from idea to industry leader.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step reveal">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <div class="step-icon">🔍</div>
+            <h3>Discovery</h3>
+            <p>We deep-dive into your business, audience, competitors, and goals to build a complete picture of your growth opportunity.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <div class="step-icon">🗺️</div>
+            <h3>Strategy</h3>
+            <p>We craft a custom growth roadmap with clear KPIs, channel mix, budget allocation, and creative direction tailored to your goals.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <div class="step-icon">🚀</div>
+            <h3>Execution</h3>
+            <p>Our team launches campaigns, builds assets, and deploys strategies with precision — on time, on brand, on budget.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <div class="step-icon">📈</div>
+            <h3>Optimization</h3>
+            <p>Continuous monitoring, testing, and iteration. We kill what doesn't work and double down on what does.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <div class="step-icon">🌐</div>
+            <h3>Scale</h3>
+            <p>Once we've found what works, we pour fuel on it. Systematic scaling that compounds your results month over month.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="portfolio-section" id="work">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">Featured Work</span>
+        <h2 class="section-title">Results That <span class="gradient-text">Speak</span></h2>
+        <p class="section-sub">Real campaigns, real brands, real growth. Here's what we've built for our clients.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card reveal">
+          <div class="portfolio-img-wrap">
+            <img src="images/portfolio/Meta Ads Portfolio/MA 1.png" alt="Meta Ads Campaign Result 1" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="portfolio-industry">Performance Marketing</span>
+              <h3>Meta Ads Campaign</h3>
+              <div class="portfolio-results">
+                <span>4.2x ROAS</span>
+                <span>₹2.8L Revenue</span>
+              </div>
+              <a href="https://wa.me/917355801141?text=Hi!%20I%27d%20like%20to%20see%20the%20case%20study%20for%20your%20Meta%20Ads%20campaigns." target="_blank" class="portfolio-btn">View Case Study →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal">
+          <div class="portfolio-img-wrap">
+            <img src="images/portfolio/Meta Ads Portfolio/MA 2.png" alt="Meta Ads Campaign Result 2" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="portfolio-industry">D2C Brand</span>
+              <h3>E-commerce Growth</h3>
+              <div class="portfolio-results">
+                <span>3.8x ROAS</span>
+                <span>320% Traffic</span>
+              </div>
+              <a href="https://wa.me/917355801141?text=Hi!%20I%27d%20like%20to%20see%20the%20case%20study%20for%20your%20E-commerce%20campaigns." target="_blank" class="portfolio-btn">View Case Study →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal">
+          <div class="portfolio-img-wrap">
+            <img src="images/portfolio/Meta Ads Portfolio/MA 3.png" alt="Meta Ads Campaign Result 3" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="portfolio-industry">Lead Generation</span>
+              <h3>B2B Lead Campaign</h3>
+              <div class="portfolio-results">
+                <span>480 Leads</span>
+                <span>₹89 CPL</span>
+              </div>
+              <a href="https://wa.me/917355801141?text=Hi!%20I%27d%20like%20to%20see%20the%20case%20study%20for%20your%20lead%20generation%20campaigns." target="_blank" class="portfolio-btn">View Case Study →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal">
+          <div class="portfolio-img-wrap">
+            <img src="images/portfolio/Meta Ads Portfolio/MA 4.png" alt="Meta Ads Campaign Result 4" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="portfolio-industry">SaaS Marketing</span>
+              <h3>SaaS Acquisition</h3>
+              <div class="portfolio-results">
+                <span>210 Trials</span>
+                <span>28% Conversion</span>
+              </div>
+              <a href="https://wa.me/917355801141?text=Hi!%20I%27d%20like%20to%20see%20the%20case%20study%20for%20your%20SaaS%20campaigns." target="_blank" class="portfolio-btn">View Case Study →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal">
+          <div class="portfolio-img-wrap">
+            <img src="images/portfolio/Meta Ads Portfolio/MA 5.png" alt="Meta Ads Campaign Result 5" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="portfolio-industry">Real Estate</span>
+              <h3>Real Estate Leads</h3>
+              <div class="portfolio-results">
+                <span>1200+ Leads</span>
+                <span>₹65 CPL</span>
+              </div>
+              <a href="https://wa.me/917355801141?text=Hi!%20I%27d%20like%20to%20see%20the%20case%20study%20for%20your%20Real%20Estate%20campaigns." target="_blank" class="portfolio-btn">View Case Study →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal">
+          <div class="portfolio-img-wrap">
+            <img src="images/portfolio/Meta Ads Portfolio/MA 6.png" alt="Meta Ads Campaign Result 6" loading="lazy">
+            <div class="portfolio-overlay">
+              <span class="portfolio-industry">Healthcare</span>
+              <h3>Healthcare Campaign</h3>
+              <div class="portfolio-results">
+                <span>5x Appointments</span>
+                <span>60% Lower CPA</span>
+              </div>
+              <a href="https://wa.me/917355801141?text=Hi!%20I%27d%20like%20to%20see%20the%20case%20study%20for%20your%20Healthcare%20campaigns." target="_blank" class="portfolio-btn">View Case Study →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-cta reveal">
+        <a href="https://wa.me/917355801141?text=Hi%20Ampixel%20Media!%20I%27d%20like%20to%20discuss%20my%20project." target="_blank" class="btn-primary-glow">
+          <span>Start Your Project</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">Client Love</span>
+        <h2 class="section-title">What Our Clients <span class="gradient-text">Say</span></h2>
+        <p class="section-sub">Real words from real brands who've experienced the Ampixel difference.</p>
+      </div>
+
+      <div class="testimonials-track-wrapper">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Ampixel Media completely transformed our online presence. Our ROAS went from 1.8x to 4.6x in just 3 months. The team is exceptionally skilled and genuinely cares about results."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #6366F1, #06B6D4)">RK</div>
+              <div class="author-info">
+                <strong>Rahul Kapoor</strong>
+                <span>Founder, D2C Fashion Brand</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"The website they built for us is absolutely stunning. Traffic doubled in the first month and our lead quality has never been better. Worth every penny and then some."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #A855F7, #EC4899)">SP</div>
+              <div class="author-info">
+                <strong>Sneha Patel</strong>
+                <span>CEO, Real Estate Group</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Their AI automation setup saved us 20+ hours per week. The CRM flows they built are incredible — leads are nurtured automatically and our close rate jumped 35%."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #10B981, #06B6D4)">AM</div>
+              <div class="author-info">
+                <strong>Arjun Mehta</strong>
+                <span>Co-founder, SaaS Startup</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"We tried 3 agencies before Ampixel. The difference is night and day. They actually understand brand building, not just running ads. Our Instagram grew from 8K to 85K in 6 months."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #F59E0B, #EF4444)">NK</div>
+              <div class="author-info">
+                <strong>Nidhi Khanna</strong>
+                <span>Personal Brand & Coach</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Their influencer campaigns drove more brand awareness in one week than all our previous efforts combined. The ROI tracking they provided was transparent and impressive."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #6366F1, #A855F7)">VS</div>
+              <div class="author-info">
+                <strong>Vikram Sharma</strong>
+                <span>Marketing Head, FMCG Brand</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Best investment we've made for our clinic. The Google and Meta ads brought in 5x the appointments at half the cost of our previous campaigns. Highly recommend!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #06B6D4, #10B981)">DR</div>
+              <div class="author-info">
+                <strong>Dr. Riya Singh</strong>
+                <span>Dermatologist & Clinic Owner</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate for seamless loop -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Ampixel Media completely transformed our online presence. Our ROAS went from 1.8x to 4.6x in just 3 months. The team is exceptionally skilled and genuinely cares about results."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #6366F1, #06B6D4)">RK</div>
+              <div class="author-info">
+                <strong>Rahul Kapoor</strong>
+                <span>Founder, D2C Fashion Brand</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"The website they built for us is absolutely stunning. Traffic doubled in the first month and our lead quality has never been better. Worth every penny and then some."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #A855F7, #EC4899)">SP</div>
+              <div class="author-info">
+                <strong>Sneha Patel</strong>
+                <span>CEO, Real Estate Group</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Their AI automation setup saved us 20+ hours per week. The CRM flows they built are incredible — leads are nurtured automatically and our close rate jumped 35%."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #10B981, #06B6D4)">AM</div>
+              <div class="author-info">
+                <strong>Arjun Mehta</strong>
+                <span>Co-founder, SaaS Startup</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS SECTION -->
+  <section class="results-section" id="results">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">The Numbers</span>
+        <h2 class="section-title">Real Results. <span class="gradient-text">Real Impact.</span></h2>
+        <p class="section-sub">Numbers that prove performance marketing done right is a game-changer.</p>
+      </div>
+
+      <div class="results-grid">
+        <div class="result-card reveal">
+          <div class="result-icon">💰</div>
+          <div class="result-num" data-count="50" data-suffix="Cr+">₹0</div>
+          <div class="result-label">Revenue Generated</div>
+          <p class="result-desc">Total client revenue attributed to Ampixel campaigns and strategies</p>
+        </div>
+        <div class="result-card reveal">
+          <div class="result-icon">🎯</div>
+          <div class="result-num" data-count="25000" data-suffix="+">0+</div>
+          <div class="result-label">Qualified Leads</div>
+          <p class="result-desc">High-intent leads delivered to our clients across all verticals</p>
+        </div>
+        <div class="result-card reveal">
+          <div class="result-icon">📊</div>
+          <div class="result-num" data-count="4" data-suffix=".2x Avg">0x</div>
+          <div class="result-label">Average ROAS</div>
+          <p class="result-desc">Return on ad spend achieved across all managed campaigns</p>
+        </div>
+        <div class="result-card reveal">
+          <div class="result-icon">🌐</div>
+          <div class="result-num" data-count="15" data-suffix="M+">0M+</div>
+          <div class="result-label">Website Traffic</div>
+          <p class="result-desc">Organic and paid traffic driven to client websites and landing pages</p>
+        </div>
+        <div class="result-card reveal">
+          <div class="result-icon">🔥</div>
+          <div class="result-num" data-count="32" data-suffix="%">0%</div>
+          <div class="result-label">Avg Conversion Lift</div>
+          <p class="result-desc">Average increase in conversion rates after our CRO interventions</p>
+        </div>
+        <div class="result-card reveal">
+          <div class="result-icon">⭐</div>
+          <div class="result-num" data-count="98" data-suffix="%">0%</div>
+          <div class="result-label">Client Retention</div>
+          <p class="result-desc">Clients who renew and expand their partnership with Ampixel</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section class="team-section" id="team">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">The Team</span>
+        <h2 class="section-title">Minds Behind <span class="gradient-text">Your Growth</span></h2>
+        <p class="section-sub">A team of specialists obsessed with results, creativity, and your brand's success.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-img-wrap">
+            <img src="images/team/TusharSaini.jpg" alt="Tushar Saini — Founder & CEO" loading="lazy">
+            <div class="team-overlay">
+              <div class="team-social">
+                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">in</a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">ig</a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3>Tushar Saini</h3>
+            <span class="team-role">Founder & CEO</span>
+            <p>Growth strategist with expertise in performance marketing, brand building, and scaling digital businesses.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-img-wrap">
+            <img src="images/team/AngelDagar.jpeg" alt="Angel Dagar — Creative Director" loading="lazy">
+            <div class="team-overlay">
+              <div class="team-social">
+                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">in</a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">ig</a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3>Angel Dagar</h3>
+            <span class="team-role">Creative Director</span>
+            <p>Award-winning creative leader who crafts visual identities and content that captivate audiences and drive action.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-img-wrap team-placeholder">
+            <div class="placeholder-avatar" style="background: linear-gradient(135deg, #6366F1 0%, #06B6D4 100%)">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="white"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div class="team-overlay">
+              <div class="team-social">
+                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">in</a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3>Performance Team</h3>
+            <span class="team-role">Paid Media Specialists</span>
+            <p>Meta & Google certified performance marketers obsessed with ROAS, CPL, and campaign optimization.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-img-wrap team-placeholder">
+            <div class="placeholder-avatar" style="background: linear-gradient(135deg, #A855F7 0%, #EC4899 100%)">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85"/></svg>
+            </div>
+            <div class="team-overlay">
+              <div class="team-social">
+                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">in</a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3>Tech & Dev Team</h3>
+            <span class="team-role">Web & App Developers</span>
+            <p>Full-stack engineers building blazing-fast, beautiful digital experiences across web and mobile platforms.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-img-wrap team-placeholder">
+            <div class="placeholder-avatar" style="background: linear-gradient(135deg, #10B981 0%, #06B6D4 100%)">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="white"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+            </div>
+            <div class="team-overlay">
+              <div class="team-social">
+                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">in</a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3>AI & Automation</h3>
+            <span class="team-role">AI Automation Experts</span>
+            <p>AI specialists building intelligent automations, chatbots, and workflows that scale your business 24/7.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section" id="faq">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Questions <span class="gradient-text">Answered</span></h2>
+        <p class="section-sub">Everything you need to know before we start growing your brand together.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>What types of businesses do you work with?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>We work with startups, personal brands, D2C brands, SaaS companies, local businesses, healthcare providers, real estate firms, educational institutions, and more. If you have ambitious growth goals, we're a great fit.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>How long before I see results?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>Performance marketing campaigns typically show meaningful results within 30-60 days. SEO takes 3-6 months to compound. Website development projects are delivered in 2-6 weeks depending on complexity. We're always upfront about realistic timelines.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>What is your minimum budget for ad campaigns?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>We recommend a minimum ad spend of ₹30,000-₹50,000/month for meaningful results on Meta or Google. Our management fees are separate. We tailor strategies to make every budget work as efficiently as possible.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>Do you offer long-term retainer packages?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! Most of our clients work with us on ongoing monthly retainers for services like social media management, performance marketing, SEO, and content creation. Retainers give you priority access, dedicated resources, and better pricing than project-by-project work.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>What makes Ampixel different from other agencies?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>Three things: (1) We're obsessed with measurable ROI, not vanity metrics. (2) We combine AI-powered tools with human creativity for an unfair competitive advantage. (3) We treat your business like our own — your growth is our growth. We're not just an agency; we're your growth partner.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>How do I get started?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>Simply click "Book Free Strategy Call" and we'll schedule a 30-minute discovery call to understand your goals and see if we're the right fit. No commitment, no pressure — just a real conversation about your growth potential.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>Do you provide reporting and analytics?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely. Every client gets access to a live dashboard plus weekly and monthly performance reports. We believe in complete transparency — you'll always know exactly what's happening with your campaigns, what's working, and what we're optimizing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="final-cta" id="contact">
+    <div class="cta-blob cta-blob-1"></div>
+    <div class="cta-blob cta-blob-2"></div>
+    <div class="section-container">
+      <div class="cta-content reveal">
+        <div class="cta-badge">🚀 Limited Spots Available This Month</div>
+        <h2 class="cta-title">Let's Build Something<br><span class="gradient-text">That Actually Grows.</span></h2>
+        <p class="cta-sub">Stop leaving growth on the table. Book your free strategy call and let's map out exactly how we'll scale your brand to the next level.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/917355801141?text=Hi%20Ampixel%20Media!%20I%27d%20like%20to%20book%20a%20free%20strategy%20consultation." target="_blank" class="btn-primary-glow btn-xl">
+            <span>Book a Free Consultation</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+          <a href="mailto:hello@ampixelmedia.com" class="btn-outline-glow">
+            <span>Send Us an Email</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+        <div class="cta-trust">
+          <span>✓ Free 30-min strategy call</span>
+          <span>✓ No commitment required</span>
+          <span>✓ Results-first approach</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo">
+            <div class="logo-icon">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                <rect x="2" y="14" width="6" height="6" rx="1" fill="url(#flg1)"/>
+                <rect x="10" y="8" width="6" height="12" rx="1" fill="url(#flg1)"/>
+                <rect x="18" y="2" width="6" height="18" rx="1" fill="url(#flg1)"/>
+                <rect x="26" y="14" width="4" height="6" rx="1" fill="url(#flg1)" opacity="0.5"/>
+                <defs>
+                  <linearGradient id="flg1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#6366F1"/>
+                    <stop offset="1" stop-color="#06B6D4"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="logo-text">Ampixel<span class="logo-accent"> Media</span></span>
+          </a>
+          <p class="footer-tagline">Scaling brands that refuse to stay ordinary. Premium digital growth for ambitious businesses.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/" target="_blank" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" class="social-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="social-btn" aria-label="Twitter/X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://wa.me/917355801141" target="_blank" class="social-btn" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Digital Marketing</a></li>
+            <li><a href="#services">Performance Marketing</a></li>
+            <li><a href="#services">Social Media Management</a></li>
+            <li><a href="#services">SEO & Content</a></li>
+            <li><a href="#services">Website Development</a></li>
+            <li><a href="#services">AI Automation</a></li>
+            <li><a href="#services">Brand Identity</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#work">Our Work</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Get In Touch</h4>
+          <div class="contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:hello@ampixelmedia.com">hello@ampixelmedia.com</a>
+          </div>
+          <div class="contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.27a16 16 0 0 0 6.83 6.83l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="https://wa.me/917355801141">+91 73558 01141</a>
+          </div>
+          <div class="contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Chandigarh, India</span>
+          </div>
+
+          <div class="footer-newsletter">
+            <h4>Newsletter</h4>
+            <p>Growth tips & insights, delivered monthly.</p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input type="email" placeholder="your@email.com" aria-label="Email address" required>
+              <button type="submit">→</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Ampixel Media. All rights reserved. Built with ❤️ for ambitious brands.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

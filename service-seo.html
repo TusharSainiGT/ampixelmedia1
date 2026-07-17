@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SEO & Content Strategy — Ampixel Media</title>
+  <meta name="description" content="Dominate search engines and drive high-intent organic traffic with modern, data-backed Search Engine Optimization by Ampixel Media.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Subpage specific styles */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      transition: var(--transition);
+    }
+    .back-btn:hover {
+      color: var(--secondary);
+      transform: translateX(-4px);
+    }
+    .service-detail-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      margin-top: 60px;
+    }
+    .service-features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .feature-item-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: var(--transition);
+    }
+    .feature-item-box:hover {
+      border-color: rgba(99, 102, 241, 0.3);
+      transform: translateY(-2px);
+    }
+    .feature-item-box h4 {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: white;
+    }
+    .feature-item-box p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .tech-stack-wrap {
+      margin-top: 32px;
+    }
+    .tech-stack-title {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .tech-badge-container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .tech-badge {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    @media (max-width: 992px) {
+      .service-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="loader-a">A</span><span class="loader-m">mpixel</span>
+      </div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Loading Details...</p>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="2" y="14" width="6" height="6" rx="1" fill="url(#lg1)"/>
+            <rect x="10" y="8" width="6" height="12" rx="1" fill="url(#lg1)"/>
+            <rect x="18" y="2" width="6" height="18" rx="1" fill="url(#lg1)"/>
+            <rect x="26" y="14" width="4" height="6" rx="1" fill="url(#lg1)" opacity="0.5"/>
+            <defs>
+              <linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366F1"/>
+                <stop offset="1" stop-color="#06B6D4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">Ampixel<span class="logo-accent"> Media</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#work" class="nav-link">Work</a>
+        <a href="index.html#process" class="nav-link">Process</a>
+        <a href="index.html#team" class="nav-link">Team</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+      </div>
+      <a href="https://wa.me/917355801141?text=Hi%20Ampixel%20Media!%20I%27d%20like%20to%20book%20a%20free%20strategy%20call%20for%20SEO." target="_blank" class="nav-cta">
+        Book a Call
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home" style="min-height: 80vh;">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <div class="hero-container">
+      <a href="index.html#services" class="back-btn reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Services
+      </a>
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Search Engine Optimization & Authority Building
+      </div>
+      <h1 class="hero-title reveal reveal-delay-1">
+        SEO & <span class="gradient-text">Organic</span><br>
+        <span class="gradient-text-cyan">Growth.</span>
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        Dominate search engine result pages (SERPs) and generate high-intent inbound visitors with clean, authoritative, white-hat Search Engine Optimization.
+      </p>
+
+      <div class="hero-stats reveal reveal-delay-3" style="max-width: 680px;">
+        <div class="stat-card">
+          <div class="stat-num" data-count="420" data-suffix="%+">0%+</div>
+          <div class="stat-label">Organic Traffic Lift</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="5000" data-suffix="+">0+</div>
+          <div class="stat-label">Keywords Ranked #1</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="0" data-suffix="Ad Cost">0</div>
+          <div class="stat-label">Spend Required</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE DETAILS SECTION -->
+  <section class="services-section" style="background: var(--bg);">
+    <div class="section-container" style="padding-top: 40px;">
+      <div class="service-detail-grid">
+        <div class="reveal">
+          <div class="section-header" style="text-align: left; margin-bottom: 32px; max-width: 100%;">
+            <span class="section-tag" style="margin-left: 0;">Capabilities</span>
+            <h2 class="section-title" style="text-align: left;">Sustained Search Visibility</h2>
+            <p class="section-sub" style="text-align: left;">Paid campaigns stop when your budget ends, but organic growth keeps feeding your sales funnel month after month. We align content with actual customer intent.</p>
+          </div>
+          
+          <div class="service-features-list">
+            <div class="feature-item-box">
+              <h4>Technical SEO & Crawlability Auditing</h4>
+              <p>We analyze and correct site speed indexes, mobile friendliness thresholds, XML sitemaps, robots.txt routing, broken links (404), redirect chains, and correct HTML schema markup setups.</p>
+            </div>
+            <div class="feature-item-box">
+              <h4>On-Page Optimization & Content Clusters</h4>
+              <p>Optimize header structures, internal link flows, keyword distributions, meta tags, and image layouts. We build themed content silos that establish your domain as an industry authority.</p>
+            </div>
+            <div class="feature-item-box">
+              <h4>Authority Building & Guest Posting</h4>
+              <p>Acquire premium contextual backlinks from authoritative domains. We run manual outreach, guest-blog campaigns, and digital PR to raise your site's Domain Authority rating safely.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="section-header" style="text-align: left; margin-bottom: 32px; max-width: 100%;">
+            <span class="section-tag" style="margin-left: 0;">Our Tools</span>
+            <h2 class="section-title" style="text-align: left;">SEO Monitoring Infrastructure</h2>
+          </div>
+
+          <div class="feature-item-box" style="margin-bottom: 32px;">
+            <h4 style="color: var(--secondary);">Search Intent Mapping</h4>
+            <p>We perform deep competitive gaps reviews to select transactional, informational, and commercial search phrases, avoiding empty target traffic that doesn't convert.</p>
+          </div>
+
+          <div class="tech-stack-wrap">
+            <div class="tech-stack-title">Analytics & Tools We Trust</div>
+            <div class="tech-badge-container">
+              <span class="tech-badge">Google Search Console</span>
+              <span class="tech-badge">Google Analytics (GA4)</span>
+              <span class="tech-badge">Ahrefs Premium</span>
+              <span class="tech-badge">SEMrush Suite</span>
+              <span class="tech-badge">Screaming Frog Crawler</span>
+              <span class="tech-badge">PageSpeed Insights</span>
+              <span class="tech-badge">RankMath Schema GTM</span>
+              <span class="tech-badge">Surfer SEO Content Editor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section class="process-section" id="process">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">How We Work</span>
+        <h2 class="section-title">The Search Strategy Roadmap</h2>
+        <p class="section-sub">A scientific SEO methodology to consistently climb to the top of Google searches.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step reveal">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <div class="step-icon">⚙️</div>
+            <h3>Site Architecture Clean</h3>
+            <p>Correcting index errors, speed issues, metadata conflicts, and code bloat so bots can scan your site effortlessly.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <div class="step-icon">🔑</div>
+            <h3>Keyword Target Selection</h3>
+            <p>Selecting highly profitable keyword phrases with low keyword difficulty but solid buyer intent indexes.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <div class="step-icon">📝</div>
+            <h3>Pillar Content Creation</h3>
+            <p>Writing long-form, highly informative pillar pages and articles that satisfy search algorithms and user needs.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <div class="step-icon">🔗</div>
+            <h3>Outreach Campaign</h3>
+            <p>Earning high-quality backlinks from established resource pages, magazines, and directories to transfer ranking signals.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <div class="step-icon">📈</div>
+            <h3>Analyze & Optimize</h3>
+            <p>Monitoring search rankings, updating content blocks to match new algorithm patches, and tracking conversions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section" id="faq">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Organic Growth FAQ</h2>
+        <p class="section-sub">Quick answers to standard queries regarding search engine rankings.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>How long does it take to rank on Google's first page?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>For mid-to-high competition keywords, it typically takes 3 to 6 months of active SEO (fixing technical elements, writing content, earning backlinks) to show solid Page 1 rank placements. Lower difficulty long-tail phrases can rank within 30-60 days.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>Will you write the articles or do we need to provide them?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>We provide full-service copywriting. Our writers write SEO-optimized, highly engaging, and grammatically perfect articles based on topics approved by you. We format everything correctly with headers, tags, and internal link trees.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>Do you use AI content?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>We use AI to help map outlines and execute initial research, but we write and edit all final content manually. This ensures all pages rank high on Google's E-E-A-T indexes (Experience, Expertise, Authoritativeness, and Trustworthiness) and avoid system penalty downgrades.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="final-cta" id="contact">
+    <div class="cta-blob cta-blob-1"></div>
+    <div class="cta-blob cta-blob-2"></div>
+    <div class="section-container">
+      <div class="cta-content reveal">
+        <div class="cta-badge">🔍 Get Found Online</div>
+        <h2 class="cta-title">Stop Paying For Clicks.<br><span class="gradient-text">Start Owning Your Traffic.</span></h2>
+        <p class="cta-sub">Claim a free technical SEO audit and competitor traffic analysis worth ₹15,000 for your website.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/917355801141?text=Hi%20Ampixel%20Media!%20I%27d%20like%20to%20discuss%20an%20SEO%20and%20Organic%20Growth%20strategy." target="_blank" class="btn-primary-glow btn-xl">
+            <span>Claim Free Organic Audit</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-bottom">
+        <p>© 2025 Ampixel Media. All rights reserved. Premium digital growth.</p>
+        <div class="footer-bottom-links">
+          <a href="index.html">Back to Home Page</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

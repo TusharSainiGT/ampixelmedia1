@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Social Media & Influencer Marketing — Ampixel Media</title>
+  <meta name="description" content="Build a highly loyal community, drive viral attention, and run high-ROI creator campaigns with Ampixel Media's SMM services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Subpage specific styles */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      transition: var(--transition);
+    }
+    .back-btn:hover {
+      color: var(--secondary);
+      transform: translateX(-4px);
+    }
+    .service-detail-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      margin-top: 60px;
+    }
+    .service-features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .feature-item-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: var(--transition);
+    }
+    .feature-item-box:hover {
+      border-color: rgba(99, 102, 241, 0.3);
+      transform: translateY(-2px);
+    }
+    .feature-item-box h4 {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: white;
+    }
+    .feature-item-box p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .tech-stack-wrap {
+      margin-top: 32px;
+    }
+    .tech-stack-title {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .tech-badge-container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .tech-badge {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    @media (max-width: 992px) {
+      .service-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="loader-a">A</span><span class="loader-m">mpixel</span>
+      </div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Loading Details...</p>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="2" y="14" width="6" height="6" rx="1" fill="url(#lg1)"/>
+            <rect x="10" y="8" width="6" height="12" rx="1" fill="url(#lg1)"/>
+            <rect x="18" y="2" width="6" height="18" rx="1" fill="url(#lg1)"/>
+            <rect x="26" y="14" width="4" height="6" rx="1" fill="url(#lg1)" opacity="0.5"/>
+            <defs>
+              <linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366F1"/>
+                <stop offset="1" stop-color="#06B6D4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">Ampixel<span class="logo-accent"> Media</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#work" class="nav-link">Work</a>
+        <a href="index.html#process" class="nav-link">Process</a>
+        <a href="index.html#team" class="nav-link">Team</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+      </div>
+      <a href="https://wa.me/917355801141?text=Hi%20Ampixel%20Media!%20I%27d%20like%20to%20book%20a%20free%20strategy%20call%20for%20Social%20Media." target="_blank" class="nav-cta">
+        Book a Call
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home" style="min-height: 80vh;">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <div class="hero-container">
+      <a href="index.html#services" class="back-btn reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Services
+      </a>
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Social Branding, UGC Campaigns & Community Management
+      </div>
+      <h1 class="hero-title reveal reveal-delay-1">
+        Social & <span class="gradient-text">Creator</span><br>
+        <span class="gradient-text-cyan">Influence.</span>
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        We build authentic social proof, manage viral brand narratives, and connect you with key influencers who drive purchases and consumer trust.
+      </p>
+
+      <div class="hero-stats reveal reveal-delay-3" style="max-width: 680px;">
+        <div class="stat-card">
+          <div class="stat-num" data-count="20" data-suffix="M+ Views">0M+ Views</div>
+          <div class="stat-label">Organic Impressions</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="85" data-suffix="%">0%</div>
+          <div class="stat-label">Engagement Boost</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="250" data-suffix="+">0+</div>
+          <div class="stat-label">Influencer Collabs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE DETAILS SECTION -->
+  <section class="services-section" style="background: var(--bg);">
+    <div class="section-container" style="padding-top: 40px;">
+      <div class="service-detail-grid">
+        <div class="reveal">
+          <div class="section-header" style="text-align: left; margin-bottom: 32px; max-width: 100%;">
+            <span class="section-tag" style="margin-left: 0;">Capabilities</span>
+            <h2 class="section-title" style="text-align: left;">Establish Viral Brand Equity</h2>
+            <p class="section-sub" style="text-align: left;">Modern consumers buy from brands they trust, connect with, and follow. We turn boring corporate profiles into active, engaging digital channels.</p>
+          </div>
+          
+          <div class="service-features-list">
+            <div class="feature-item-box">
+              <h4>Social Profile Management</h4>
+              <p>Full content strategy execution for Instagram, LinkedIn, YouTube, TikTok, and Twitter. We cover feed curation, graphic templates design, calendar planning, copywriting, and analytics reporting.</p>
+            </div>
+            <div class="feature-item-box">
+              <h4>Influencer Outreach & Sourcing</h4>
+              <p>Skip the endless search for creators. We match your brand with verified Nano, Micro, and Macro influencers, managing outreach, contracts, creative scripting, and conversion tracking.</p>
+            </div>
+            <div class="feature-item-box">
+              <h4>Community Interaction & Moderation</h4>
+              <p>Social media is a two-way channel. We monitor your comments, answer direct messages (DMs) within minutes, build relationships with your target group, and moderate visual discussions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="section-header" style="text-align: left; margin-bottom: 32px; max-width: 100%;">
+            <span class="section-tag" style="margin-left: 0;">Tools We Use</span>
+            <h2 class="section-title" style="text-align: left;">SMM Scaling Software</h2>
+          </div>
+
+          <div class="feature-item-box" style="margin-bottom: 32px;">
+            <h4 style="color: var(--secondary);">User Generated Content (UGC)</h4>
+            <p>UGC increases conversion probability on landing pages. We coordinate video reviews, unboxing scripts, and tutorial captures to use across your ad funnels.</p>
+          </div>
+
+          <div class="tech-stack-wrap">
+            <div class="tech-stack-title">Content & Outreach Systems</div>
+            <div class="tech-badge-container">
+              <span class="tech-badge">Modash Sourcing</span>
+              <span class="tech-badge">GRIN Influencer Manager</span>
+              <span class="tech-badge">Notion Calendars</span>
+              <span class="tech-badge">Figma Assets</span>
+              <span class="tech-badge">Buffer / Hootsuite</span>
+              <span class="tech-badge">Later Scheduling</span>
+              <span class="tech-badge">CapCut Creative</span>
+              <span class="tech-badge">Sprout Social Analytics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section class="process-section" id="process">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">How We Work</span>
+        <h2 class="section-title">The Social Growth Roadmap</h2>
+        <p class="section-sub">A detailed, consistent approach to planning content and launching viral campaigns.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step reveal">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <div class="step-icon">🎨</div>
+            <h3>Vibe & Style Definition</h3>
+            <p>We map your brand voice guidelines, color palettes, tone rules, and typographic treatments for visual posts.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <div class="step-icon">📅</div>
+            <h3>Calendar Approval</h3>
+            <p>We create a full monthly visual calendar containing planned posts, reel briefs, captions, and exact publishing tags.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <div class="step-icon">🎭</div>
+            <h3>Creator Alignment</h3>
+            <p>Selecting and shipping products to creators, auditing content scripts, and setting tracking codes for campaign links.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <div class="step-icon">🚀</div>
+            <h3>Publish & Engage</h3>
+            <p>Publishing content during high-activity hours, responding to community comments, and boosting viral posts with paid media.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <div class="step-icon">📊</div>
+            <h3>Performance Analysis</h3>
+            <p>Reviewing view durations, conversion indexes, and engagement details to optimize next month's content direction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section" id="faq">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">SMM & Creator FAQ</h2>
+        <p class="section-sub">Quick answers to typical questions about our social media services.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>Do we need to shoot our own photos and videos?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>It helps, but it isn't mandatory. We source and direct professional creators to shoot lifestyle videos, product unboxings, and reviews. We also design graphic frames and write captions, so you can choose your level of involvement.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>How do you choose which influencers to work with?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>We analyze influencer audiences for keyword alignment, geographical details, fake follower indexes, and comment sentiment metrics. We prioritize engagement rates and historical performance over simple follower counts.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" tabindex="0">
+          <div class="faq-question">
+            <span>Do you manage our community messages and sales comments?</span>
+            <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. We set up comment rules and response flows to reply to sales queries (e.g., "Price?", "How to buy?") instantly. This keeps the algorithms happy and routes ready customers directly to your purchase portal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="final-cta" id="contact">
+    <div class="cta-blob cta-blob-1"></div>
+    <div class="cta-blob cta-blob-2"></div>
+    <div class="section-container">
+      <div class="cta-content reveal">
+        <div class="cta-badge">🔥 Go Viral</div>
+        <h2 class="cta-title">Build a Brand That People<br><span class="gradient-text">Actually Follow.</span></h2>
+        <p class="cta-sub">Book your free social audit, and we will analyze your profile aesthetics, engagement indexes, and current creator opportunities.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/917355801141?text=Hi%20Ampixel%20Media!%20I%27d%20like%20to%20discuss%20a%20Social%20Media%20and%20Influencer%20Marketing%20campaign." target="_blank" class="btn-primary-glow btn-xl">
+            <span>Claim Free Profile Review</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-bottom">
+        <p>© 2025 Ampixel Media. All rights reserved. Premium digital growth.</p>
+        <div class="footer-bottom-links">
+          <a href="index.html">Back to Home Page</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
