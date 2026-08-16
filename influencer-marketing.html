@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Graphic Designing — Ampixel Media</title>
+    <meta name="description"
+        content="Amplify your brand with authentic creator partnerships and viral UGC campaigns by Ampixel Media.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Subpage specific styles */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            color: var(--secondary);
+            transform: translateX(-4px);
+        }
+
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .service-features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .feature-item-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            transition: var(--transition);
+        }
+
+        .feature-item-box:hover {
+            border-color: rgba(99, 52, 241, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .feature-item-box h4 {
+            font-family: var(--font-head);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .feature-item-box p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .tech-stack-wrap {
+            margin-top: 32px;
+        }
+
+        .tech-stack-title {
+            font-family: var(--font-head);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .tech-badge-container {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: 8px 18px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        @media (max-width: 992px) {
+            .service-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* Masonry Grid Styles */
+        .masonry-portfolio {
+            padding: 80px 0;
+            background: var(--bg);
+        }
+
+        .masonry-grid {
+            column-count: 3;
+            column-gap: 24px;
+            margin-top: 40px;
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .masonry-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .masonry-item img {
+            width: 50%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .masonry-item:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 992px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .masonry-grid {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-inner">
+            <div class="loader-logo">
+                <span class="loader-a">A</span><span class="loader-m">mpixel</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-fill"></div>
+            </div>
+            <p class="loader-text">Loading Details...</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect x="2" y="14" width="6" height="6" rx="1" fill="url(#lg1)" />
+                        <rect x="5" y="8" width="6" height="12" rx="1" fill="url(#lg1)" />
+                        <rect x="18" y="2" width="6" height="18" rx="1" fill="url(#lg1)" />
+                        <rect x="26" y="14" width="4" height="6" rx="1" fill="url(#lg1)" opacity="0.5" />
+                        <defs>
+                            <linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#6366F1" />
+                                <stop offset="1" stop-color="#06B6D4" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">Ampixel<span class="logo-accent"> Media</span></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="index.html#work" class="nav-link">Work</a>
+                <a href="index.html#process" class="nav-link">Process</a>
+                <a href="index.html#team" class="nav-link">Team</a>
+                <a href="index.html#faq" class="nav-link">FAQ</a>
+            </div>
+            <a href="https://wa.me/917355801141?text=Hi%20Ampixel%20Media!%20I%27d%20like%20to%20book%20a%20free%20strategy%20call%20for%20Influencer%20Marketing."
+                target="_blank" class="nav-cta">
+                Book a Call
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M7 17L17 7M17 7H7M17 7v5" />
+                </svg>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home" style="min-height: 80vh;">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <div class="mouse-glow" id="mouseGlow"></div>
+
+        <div class="hero-container">
+            <a href="index.html#services" class="back-btn reveal">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="19" y1="12" x2="5" y2="12" />
+                    <polyline points="12 19 5 12 12 5" />
+                </svg>
+                Back to Services
+            </a>
+            <div class="hero-badge reveal">
+                <span class="badge-dot"></span>
+                Creator Partnerships, UGC & Brand Awareness
+            </div>
+            <h1 class="hero-title reveal reveal-delay-1">
+                Influencer <span class="gradient-text">Marketing</span><br>
+                <span class="gradient-text-cyan">& UGC.</span>
+            </h1>
+            <p class="hero-sub reveal reveal-delay-2">
+                We source and manage the perfect creators to authentically tell your brand story and captivate
+                your audience natively on social platforms.
+            </p>
+
+            <div class="hero-stats reveal reveal-delay-3" style="max-width: 680px;">
+                <div class="stat-card">
+                    <div class="stat-num" data-count="5" data-suffix="K+">0K+</div>
+                    <div class="stat-label">Influencers Onboarded</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <div class="stat-num" data-count="99" data-suffix="%">0%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <div class="stat-num" data-count="500" data-suffix="+">0+</div>
+                    <div class="stat-label">Viral Campaigns</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MASONRY PORTFOLIO SECTION -->
+    <section class="masonry-portfolio" id="portfolio">
+        <div class="section-container">
+            <div class="section-header reveal" style="text-align: center;">
+                <span class="section-tag" style="margin: 0 auto;">Campaign Results</span>
+                <h2 class="section-title">Our Campaign Results</h2>
+                <p class="section-sub">A showcase of our successful influencer collaborations and brand awareness campaigns.
+                </p>
+            </div>
+
+            <div class="masonry-grid reveal">
+                <!-- Influencer Marketing Portfolio -->
+                <div class="masonry-item">
+                    <img src="images/portfolio/Influencer Marketing Portfolio/IM 1.png" alt="Graphic Design 1"
+                        onerror="this.src='https://picsum.photos/600/800?random=ge1'">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/portfolio/Influencer Marketing Portfolio/IM 2.png" alt="Graphic Design 2"
+                        onerror="this.src='https://picsum.photos/600/600?random=ge2'">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/portfolio/Influencer Marketing Portfolio/IM 3.png" alt="Graphic Design 3"
+                        onerror="this.src='https://picsum.photos/600/900?random=ge3'">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/portfolio/Influencer Marketing Portfolio/IM 4.png" alt="Graphic Design 4"
+                        onerror="this.src='https://picsum.photos/600/500?random=ge4'">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/portfolio/Influencer Marketing Portfolio/IM 5.png" alt="Graphic Design 5"
+                        onerror="this.src='https://picsum.photos/600/750?random=ge5'">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/portfolio/Influencer Marketing Portfolio/IM 6.png" alt="Graphic Design 6"
+                        onerror="this.src='https://picsum.photos/600/850?random=ge6'">
+                </div>
+                <div class="masonry-item">
+                    <img src="images/portfolio/Influencer Marketing Portfolio/IM 1.png" alt="Graphic Design 7"
+                        onerror="this.src='https://picsum.photos/600/700?random=ge7'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE DETAILS SECTION -->
+    <section class="services-section" style="background: var(--bg);">
+        <div class="section-container" style="padding-top: 40px;">
+            <div class="service-detail-grid">
+                <div class="reveal">
+                    <div class="section-header" style="text-align: left; margin-bottom: 32px; max-width: 50%;">
+                        <span class="section-tag" style="margin-left: 0;">Capabilities</span>
+                        <h2 class="section-title" style="text-align: left;">Authentic Creator Partnerships</h2>
+                        <p class="section-sub" style="text-align: left;">First impressions matter. We design graphics
+                            that not only look beautiful but are strategically created to drive engagement and
+                            conversions.</p>
+                    </div>
+
+                    <div class="service-features-list">
+                        <div class="feature-item-box">
+                            <h4>Macro & Micro Influencers</h4>
+                            <p>Thumb-stopping graphics tailored for Instagram, Facebook, LinkedIn, and Twitter. We
+                                create carousels, single posts, and stories that align with your brand guidelines.</p>
+                        </div>
+                        <div class="feature-item-box">
+                            <h4>UGC (User Generated Content)</h4>
+                            <p>Sleek, modern, and user-friendly interface designs for web and mobile applications. We
+                                focus on usability, aesthetics, and seamless user experiences.</p>
+                        </div>
+                        <div class="feature-item-box">
+                            <h4>Campaign Analytics</h4>
+                            <p>High-quality designs for digital ads, posters, flyers, brochures, and banners. Our
+                                designs ensure your marketing campaigns stand out and deliver results.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <div class="section-header" style="text-align: left; margin-bottom: 32px; max-width: 50%;">
+                        <span class="section-tag" style="margin-left: 0;">Our Tools</span>
+                        <h2 class="section-title" style="text-align: left;">Creative Arsenal</h2>
+                    </div>
+
+                    <div class="feature-item-box" style="margin-bottom: 32px;">
+                        <h4 style="color: var(--secondary);">Influencer Sourcing Strategy</h4>
+                        <p>We blend art and psychology to choose the right color palettes, typography, and visual
+                            hierarchy that resonates with your target demographic.</p>
+                    </div>
+
+                    <div class="tech-stack-wrap">
+                        <div class="tech-stack-title">Platforms We Leverage</div>
+                        <div class="tech-badge-container">
+                            <span class="tech-badge">Instagram Reels</span>
+                            <span class="tech-badge">YouTube Shorts</span>
+                            <span class="tech-badge">TikTok</span>
+                            <span class="tech-badge">Creator Marketplaces</span>
+                            <span class="tech-badge">LinkedIn Creators</span>
+                            <span class="tech-badge">Twitter (X) Spaces</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process-section" id="process">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">How We Work</span>
+                <h2 class="section-title">The Influencer Workflow</h2>
+                <p class="section-sub">Our methodical 4-step process to deliver viral creator campaigns.</p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-step reveal">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">🎯</div>
+                        <h3>Brand Alignment</h3>
+                        <p>Understanding your brand voice, goals, and identifying the absolute perfect creator personas for your product.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">💡</div>
+                        <h3>Outreach & Negotiation</h3>
+                        <p>Contacting vetted creators, negotiating rates, and finalizing clear content deliverables and contracts.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">🎨</div>
+                        <h3>Content Creation & Review</h3>
+                        <p>Creators draft content. We review and ensure it aligns perfectly with your brand guidelines and messaging.
+                        </p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <div class="step-icon">✨</div>
+                        <h3>Launch & Amplification</h3>
+                        <p>Content goes live! We monitor engagement and amplify top-performing posts using paid ads for maximum reach.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section" id="faq">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Influencer Marketing FAQ</h2>
+                <p class="section-sub">Quick answers to typical queries about our influencer marketing services.</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item reveal" tabindex="0">
+                    <div class="faq-question">
+                        <span>Do you work with micro or macro influencers?</span>
+                        <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide all standard formats including PNG, JPG, PDF, and source files like PSD, AI, or
+                            TikTok links depending on the project requirements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal" tabindex="0">
+                    <div class="faq-question">
+                        <span>Who handles creator payments and contracts?</span>
+                        <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We typically include a set number of revisions (usually 2-3 rounds) to ensure the project
+                            stays on track, but we always work with you until you are completely satisfied.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal" tabindex="0">
+                    <div class="faq-question">
+                        <span>How do you measure campaign success?</span>
+                        <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We ensure all new designs are perfectly aligned with your existing brand
+                            identity, typography, and color schemes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="final-cta" id="contact">
+        <div class="cta-blob cta-blob-1"></div>
+        <div class="cta-blob cta-blob-2"></div>
+        <div class="section-container">
+            <div class="cta-content reveal">
+                <div class="cta-badge">🎨 Creative Excellence</div>
+                <h2 class="cta-title">Bring Your Vision to Life.<br><span class="gradient-text">Let's Design Something
+                        Amazing.</span></h2>
+                <p class="cta-sub">Ready to upgrade your brand's visuals? Get in touch to discuss your next design
+                    project.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/917355801141?text=Hi%20Ampixel%20Media!%20I%27d%20like%20to%20discuss%20a%20Influencer%20Marketing%20campaign."
+                        target="_blank" class="btn-primary-glow btn-xl">
+                        <span>Start Your Influencer Campaign</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M7 17L17 7M17 7H7M17 7v5" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>© 2025 Ampixel Media. All rights reserved. Premium digital growth.</p>
+                <div class="footer-bottom-links">
+                    <a href="index.html">Back to Home Page</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="refund-policy.html">Refund Policy</a>
+                    <a href="terms-and-conditions.html">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
